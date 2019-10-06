@@ -49,3 +49,35 @@ function multiply(array) {
 }
 
 multiply([1,2,3,4,5,6,7]);
+
+// zadanie 5
+function getEvenAvarage(array) {
+    let evenSum = 0;
+    let evenCounter = 0;
+    for(let i = 0; i < array.length; i++) {
+        if (array[i] % 2 == 0) {
+            evenSum += array[i];
+            evenCounter++;
+        }
+    }
+
+    let evenAvg = evenSum / evenCounter;
+    console.log(evenAvg);
+    if (evenCounter == 0) {
+        return null
+    } else {
+        return evenAvg;
+    }
+    
+}
+
+getEvenAvarage([1,2,3,4,5,6,7])
+
+//zadanie 6
+function sortArray(array) {
+    array.sort((a,b) => a-b);
+    console.log(array);
+    return array;
+}
+
+sortArray([145,11,3,64,4,6,10])
